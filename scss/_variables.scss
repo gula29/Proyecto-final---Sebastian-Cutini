@@ -1,0 +1,50 @@
+// colores de texto
+$color-text-primary:#6d6868;
+$color-text-secondary: darkgrey;
+
+
+// colores de fondo
+
+$background-primary:#ffd9df;
+$background-secundary: #fceee7;
+
+
+// sombras de imagen
+$sombra-chica: 5px 5px 10px gray;
+$sombra-amplia: 5px 5px 20px gray;
+
+// size de fuentes
+$subtitulo-base: 1.5em;
+$parrafo-inferior: 1em;
+// MIXIN
+
+// Borde enlace-inferior
+@mixin border-inferior {
+    border-bottom: solid 1px gray;
+    border-left: solid 1px gray;
+    border-right: solid 1px gray;
+}
+
+// ESTILO H2
+@mixin h2-index {
+    text-align: center;
+    color: $color-text-primary;
+    font-size: $subtitulo-base;
+
+}
+// ESTILO TITULO HTML-SECUNDARIOS
+@mixin titulo {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: $subtitulo-base + .5em;
+    margin: auto;
+    width: 320px;
+    height: 200px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}

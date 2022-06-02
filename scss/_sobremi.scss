@@ -1,0 +1,83 @@
+/*estilo del html sobremi */
+.titulo-sobremi {
+    @include titulo;
+
+    background-image: url(../public/16.jpg);
+    color: darkgrey;
+
+    animation-name: primerimagen;
+}
+
+@keyframes primerimagen {
+    0% {
+        transform: translateX(-305px);
+        opacity: 0;
+    }
+
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+}
+
+.seccion1-sobremi {
+    background-color: $background-primary;
+
+    display: grid;
+    grid-template-areas:
+        "img textoh2 "
+        "textoh3 textoh3 ";
+    grid-template-columns: 40% 60%;
+
+}
+
+.img-sobremi {
+
+    grid-area: img;
+
+
+    border-radius: 10px;
+    box-shadow: $sombra-chica;
+
+    margin: auto;
+    height: 100px;
+
+}
+
+.h2-sobremi {
+    grid-area: textoh2;
+
+    font-size: $subtitulo-base;
+
+    margin: 15px 7px;
+}
+
+.h3-sobremi {
+    grid-area: textoh3;
+    font-size: $parrafo-inferior;
+
+    margin: 0 10px;
+
+}
+
+.enlace-contacto-sobremi {
+
+    text-align: center;
+
+    a {
+        font-size: $subtitulo-base;
+        color: $color-text-primary;
+    }
+
+
+    &:hover {
+
+        background: #ccc;
+        background: linear-gradient(black, rgb(136, 63, 63), rgb(108, 7, 241));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+
+    }
+}

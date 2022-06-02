@@ -1,0 +1,366 @@
+/* estilo h1 index */
+.h1Home {
+    font-family: 'Dancing Script', cursive;
+    font-size: $parrafo-inferior*2;
+    text-align: center;
+    color: rgba(119, 118, 119, 0.795);
+    margin: auto;
+
+}
+
+/* estilos del navegador */
+
+.nav-link {
+
+    font-weight: bold;
+    font-size: $parrafo-inferior;
+    text-align: center;
+
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 35px;
+
+}
+
+
+.navbar-nav {
+
+    a {
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: black;
+            transform-origin: bottom right;
+            transition: transform 0.6s ease-out;
+        }
+
+        &:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+    }
+}
+
+.titulo-secundario {
+    @include h2-index;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0 15px;
+}
+
+
+/* estilo del main-index */
+// utilizo maps
+$background-seccion-index :(seccion-1: $background-primary,
+    seccion-2: $background-secundary,
+    seccion-3: #fceee700,
+    seccion-4: $background-primary, );
+
+@each $seccion,
+$background in $background-seccion-index {
+    .index-#{$seccion} {
+        background: $background;
+
+    }
+}
+
+/* primer seccion */
+
+.index-seccion-1 {
+
+    display: grid;
+    grid-template-areas:
+        "img1"
+        "titulo1"
+        "img2"
+        "titulo2";
+
+}
+
+.img1 {
+    grid-area: img1;
+
+    margin: 5px 35px;
+    border-radius: 5px;
+    box-shadow: $sombra-chica;
+
+    width: 75%;
+
+    opacity: 1;
+    animation-name: img-sec1;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+
+.img2 {
+    grid-area: img2;
+
+
+    margin: 5px 35px;
+    border-radius: 5px;
+    box-shadow: $sombra-chica;
+
+    width: 75%;
+
+    opacity: 1;
+    animation-name: img-sec1;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+@keyframes img-sec1 {
+    0% {
+        transform: translateY(-35px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+.h3-capac {
+    grid-area: titulo1;
+
+    margin: 0%;
+
+    transform: translate(0, -50px);
+
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: $parrafo-inferior;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+.h3-sesio {
+    grid-area: titulo2;
+
+    margin: 0%;
+
+    transform: translate(0, -50px);
+
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+
+}
+
+/* segunda Seccion */
+
+.texto-section2-index {
+    h2 {
+        @include h2-index;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-decoration: underline;
+        margin: 0px 25px;
+    }
+
+    p {
+        text-align: center;
+        font-size: $parrafo-inferior - .2em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        margin: 0 25px
+    }
+}
+
+.enlace-sobremi {
+
+    text-decoration: none;
+    color: crimson;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+    &:hover {
+        text-decoration: underline;
+
+        animation-name: sobremi;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+
+    @keyframes sobremi {
+        0% {
+            color: rgb(219, 166, 177);
+        }
+
+        50% {
+            color: rgb(138, 81, 98);
+        }
+
+        100% {
+            color: rgb(255, 0, 51);
+
+
+        }
+    }
+}
+
+.imgSect2 {
+    margin: 0 10px;
+    border-radius: 7px;
+
+    width: 90%;
+}
+
+/* tercer seccion */
+
+.index-seccion-3 {
+    h2 {
+        @include h2-index;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    img {
+        display: block;
+        margin: 0 15px;
+        width: 90%;
+
+    }
+}
+
+.enlaces-seccion3-index {
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    font-size: $parrafo-inferior;
+
+
+    div:hover {
+        transform: scale(1.2);
+        text-decoration: underline;
+    }
+
+    a {
+
+        text-decoration: none;
+        color: grey;
+        margin: 0 15px;
+
+    }
+}
+
+.contacto-seccion3-index {
+    text-align: center;
+    font-size: $parrafo-inferior - .3em;
+
+    a {
+        text-decoration: none;
+        color: $color-text-primary;
+        @include border-inferior;
+
+    }
+}
+
+/* cuarta seccion */
+.index-seccion-4 {
+
+    h2 {
+        @include h2-index;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    img {
+        display: block;
+        margin: 0 15px;
+        width: 90%;
+    }
+}
+
+.enlaces-seccion4-index {
+    display: flex;
+    justify-content: center;
+
+    text-align: center;
+    font-size: $parrafo-inferior;
+
+
+    div:hover {
+        transform: scale(1.2);
+        text-decoration: underline;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-text-secondary;
+        margin: 0 15px;
+    }
+}
+
+
+.contacto-seccion4-index {
+    text-align: center;
+    font-size: $parrafo-inferior - .3em;
+
+    a {
+        text-decoration: none;
+        color: $color-text-primary;
+        @include border-inferior;
+    }
+}
+
+/* estilos del footer */
+.footer-copy {
+    background-color: rgb(0, 0, 0);
+}
+
+.icono-back_to_top {
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+
+    border: solid 1px $color-text-primary;
+    width: 32px;
+    height: 32px;
+
+}
+
+#back_to_top {
+
+    text-decoration: none;
+    text-align: center;
+
+    color: $color-text-primary;
+    font-size: $subtitulo-base;
+    margin: 5px;
+}
+
+.copyright {
+    font-size: $parrafo-inferior/2;
+    text-align: center;
+    color: $color-text-primary;
+
+    i {
+        margin-right: 15px;
+    }
+}
+
+.footer-social {
+    text-decoration: none;
+    text-align: center;
+
+
+    a {
+        color: $color-text-primary;
+
+    }
+}
