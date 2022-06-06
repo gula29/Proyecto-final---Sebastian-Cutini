@@ -55,10 +55,7 @@
 /* primer seccion */
 .index-seccion-1 {
   display: grid;
-  grid-template-areas: "img1"
- "titulo1"
- "img2"
- "titulo2"; }
+  grid-template-areas: "img1" "titulo1" "img2" "titulo2"; }
 
 .img1 {
   grid-area: img1;
@@ -221,8 +218,30 @@
     border-left: solid 1px gray;
     border-right: solid 1px gray; }
 
+.galeria-instagram .titulo-galeria {
+  text-decoration: none;
+  color: black;
+  margin-left: 25px;
+  font-size: .7em;
+  font-weight: bold; }
+
+.galeria-instagram .galeria-fotos {
+  justify-content: center;
+  margin-bottom: 5px; }
+
+.galeria-instagram .foto-galeria {
+  width: 240px;
+  height: 240px;
+  margin-bottom: 5px;
+  margin-right: 5px; }
+
+.galeria-instagram .fin-galeria {
+  color: white;
+  text-decoration: none; }
+
 /* estilos del footer */
 .footer-copy {
+  margin-top: 10px;
   background-color: black; }
 
 .icono-back_to_top {
@@ -282,8 +301,7 @@
 .seccion1-sobremi {
   background-color: #ffd9df;
   display: grid;
-  grid-template-areas: "img textoh2 "
- "textoh3 textoh3 ";
+  grid-template-areas: "img textoh2 " "textoh3 textoh3 ";
   grid-template-columns: 40% 60%; }
 
 .img-sobremi {
@@ -495,9 +513,7 @@
 
 .grid-contacto {
   display: grid;
-  grid-template-areas: "waths"
- "email"
- "form "; }
+  grid-template-areas: "waths" "email" "form "; }
 
 .waths {
   grid-area: waths;
@@ -567,6 +583,15 @@
     font-size: 1.5em; }
   .contacto-seccion4-index {
     font-size: 1.5em; }
+  .galeria-instagram .titulo-galeria {
+    margin-left: 45px;
+    font-size: 1em;
+    font-weight: bold; }
+  .galeria-instagram .galeria-fotos {
+    margin-bottom: 5px;
+    margin-left: 22px; }
+  .galeria-instagram .foto-galeria {
+    margin-right: 5px; }
   .copyright {
     font-size: 0.7em; }
   /* tablet sobremi */
@@ -637,8 +662,7 @@
     font-size: 3em; }
   .grid-contacto {
     display: grid;
-    grid-template-areas: "waths email"
- "form form"; }
+    grid-template-areas: "waths email" "form form"; }
   .seccion3-contacto h3 {
     font-size: 1.5em; }
   .seccion3-contacto h4 {
@@ -655,8 +679,7 @@
     margin: 1em 3em; }
   .index-seccion-1 {
     display: grid;
-    grid-template-areas: "img1 img2"
- "titulo1 titulo2";
+    grid-template-areas: "img1 img2" "titulo1 titulo2";
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px; }
   .img1 {
@@ -671,8 +694,7 @@
     transform: translate(0, -75px); }
   .index-seccion-2 {
     display: grid;
-    grid-template-areas: "texto img"
- "texto img"; }
+    grid-template-areas: "texto img" "texto img"; }
   .texto-section2-index {
     grid-area: texto; }
     .texto-section2-index h2 {
@@ -710,6 +732,8 @@
       margin: 0 25px; }
   .contacto-seccion4-index {
     font-size: 1.8em; }
+  .galeria-fotos {
+    justify-content: center; }
   .footer-copy {
     display: grid;
     grid-template-areas: "copy social buttom";
@@ -740,8 +764,7 @@
     height: 500px; }
   .seccion1-sobremi {
     display: grid;
-    grid-template-areas: "img textoh2"
- "img textoh3";
+    grid-template-areas: "img textoh2" "img textoh3";
     grid-template-columns: 1fr 2fr; }
   .img-sobremi {
     grid-area: img;
@@ -855,8 +878,7 @@
     font-size: 3em; }
   .grid-contacto {
     display: grid;
-    grid-template-areas: "waths email"
- "form form"; }
+    grid-template-areas: "waths email" "form form"; }
   .seccion3-contacto h3 {
     font-size: 2.5em;
     margin-left: 50px; }

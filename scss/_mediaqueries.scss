@@ -75,6 +75,28 @@
 
     }
 
+    .galeria-instagram {
+        .titulo-galeria {
+            margin-left: 45px;
+            font-size: 1em;
+            font-weight: bold;
+
+        }
+
+
+        .galeria-fotos {
+
+            margin-bottom: 5px;
+            margin-left: 22px;
+        }
+
+        .foto-galeria {
+            margin-right: 5px;
+
+        }
+
+    }
+
     .copyright {
         font-size: $parrafo-inferior - 0.3em;
 
@@ -384,6 +406,10 @@
     .contacto-seccion4-index {
 
         font-size: 1.8em;
+    }
+
+    .galeria-fotos {
+        justify-content: center;
     }
 
     .footer-copy {
